@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A personal birthday surprise for Zinia Ahmed, made with love by SAMYE."
+    />
+    <title>Happy Birthday, Zinia Ahmed</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="loading-screen" id="loadingScreen" role="status" aria-live="polite">
+      <div class="loading-orbit" aria-hidden="true"><span>♡</span></div>
+      <p>Preparing something beautiful...</p>
+    </div>
+
+    <audio id="birthdayMusic" loop preload="auto">
+      <source src="happy-birthday.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div class="ambient-layer" id="ambientLayer" aria-hidden="true"></div>
+    <div class="celebration-layer" id="celebrationLayer" aria-hidden="true"></div>
+    <div class="music-prompt" id="musicPrompt" role="status" aria-live="polite" hidden>
+      <span aria-hidden="true">🎵</span> Tap anywhere to start the music
+    </div>
+
+    <button class="music-control" id="musicButton" type="button" aria-label="Play birthday music">
+      <span class="music-control__icon" id="musicIcon" aria-hidden="true">🔇</span>
+      <span id="musicLabel">Music Off</span>
+    </button>
+    <div class="samye-watermark" aria-label="Created by SAMYE">♡ SAMYE</div>
+
+    <main class="site" id="site">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero__visual" aria-hidden="true">
+          <img data-photo="1" src="photo1.jpg" alt="" />
+        </div>
+        <div class="hero__veil" aria-hidden="true"></div>
+        <div class="hero__decor" aria-hidden="true">
+          <span class="decor-heart decor-heart--one">♡</span>
+          <span class="decor-heart decor-heart--two">♥</span>
+          <span class="decor-star decor-star--one">✦</span>
+          <span class="decor-star decor-star--two">✧</span>
+          <span class="hero-balloon hero-balloon--one">🎈</span>
+          <span class="hero-balloon hero-balloon--two">🎈</span>
+        </div>
+
+        <div class="hero__content page-width">
+          <div class="hero__copy">
+            <p class="eyebrow hero__eyebrow">SAMYE presents / a birthday letter, made with love</p>
+            <h1 id="hero-title"><span aria-hidden="true">🎉</span> Happy Birthday <span aria-hidden="true">🎉</span></h1>
+            <p class="hero__name" data-display-name>Zinia (Airav)</p>
+            <p class="hero__subtitle">Today is all about celebrating <strong>YOU</strong>! <span aria-hidden="true">❤️✨</span></p>
+            <button class="button button--primary" id="surpriseButton" type="button">
+              <span aria-hidden="true">🎁</span> Open Your Birthday Surprise
+            </button>
+          </div>
+
+          <div class="cake cake--hero" aria-label="An animated birthday cake" role="img">
+            <div class="cake__flames" aria-hidden="true">
+              <i></i><i></i><i></i>
+            </div>
+            <div class="cake__candles" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="cake__frosting" aria-hidden="true"></div>
+            <div class="cake__layer cake__layer--top" aria-hidden="true"></div>
+            <div class="cake__layer cake__layer--bottom" aria-hidden="true"></div>
+            <div class="cake__plate" aria-hidden="true"></div>
+          </div>
+        </div>
+        <a class="hero__scroll" href="#message" aria-label="Scroll to birthday message">
+          <span>Scroll for your letter</span><i aria-hidden="true"></i>
+        </a>
+      </section>
+
+      <section class="section section--message" id="message" aria-labelledby="message-title">
+        <div class="section-glow section-glow--left" aria-hidden="true"></div>
+        <div class="page-width">
+          <header class="section-heading reveal">
+            <p class="eyebrow">For someone truly special</p>
+            <h2 id="message-title">💌 A Little Message For You</h2>
+          </header>
+          <article class="message-card reveal" aria-label="Birthday message">
+            <span class="message-card__spark message-card__spark--one" aria-hidden="true">✦</span>
+            <span class="message-card__spark message-card__spark--two" aria-hidden="true">✧</span>
+            <p class="message-card__salutation">Dear <span data-first-name>Zinia</span>,</p>
+            <p class="typed-message" id="typedMessage" aria-live="polite"></p>
+            <p class="message-card__signoff">With all my warmest wishes <span aria-hidden="true">♡</span></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--wish" id="make-a-wish" aria-labelledby="wish-title">
+        <div class="page-width wish-layout">
+          <div class="wish-copy reveal">
+            <p class="eyebrow">A little moment of magic</p>
+            <h2 id="wish-title">🎂 Make a Wish 🎂</h2>
+            <p>Close your eyes...<br />Make your wish...<br />And let the magic begin. <span aria-hidden="true">✨</span></p>
+            <button class="button button--primary" id="wishButton" type="button">
+              <span aria-hidden="true">✨</span> Make a Wish
+            </button>
+            <p class="wish-result" id="wishResult" aria-live="polite">✨ Your wish will come true! ❤️</p>
+          </div>
+
+          <div class="wish-stage reveal" id="wishStage">
+            <div class="cake cake--wish" id="wishCake" aria-label="Birthday cake with candles" role="img">
+              <div class="cake__flames" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="cake__candles" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="cake__frosting" aria-hidden="true"></div>
+              <div class="cake__layer cake__layer--top" aria-hidden="true"></div>
+              <div class="cake__layer cake__layer--bottom" aria-hidden="true"></div>
+              <div class="cake__plate" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section memory-feature" id="memory-portrait" aria-labelledby="memory-feature-title">
+        <div class="page-width memory-feature__layout">
+          <figure class="memory-feature__image reveal">
+            <img data-photo="2" src="photo2.jpg" alt="A beautiful birthday memory of Zinia" />
+            <figcaption>A beautiful memory <span aria-hidden="true">❤️</span></figcaption>
+          </figure>
+          <div class="memory-feature__copy reveal">
+            <p class="eyebrow">Hold this moment close</p>
+            <h2 id="memory-feature-title">Some memories are meant to glow forever.</h2>
+            <p>Today is a beautiful reminder of the joy, warmth, and light you bring to every moment.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--memories" id="memories" aria-labelledby="memories-title">
+        <div class="page-width">
+          <header class="section-heading reveal">
+            <p class="eyebrow">The moments we treasure</p>
+            <h2 id="memories-title">✨ Beautiful Memories</h2>
+          </header>
+          <div class="memory-grid">
+            <figure class="memory-card reveal">
+              <img data-photo="1" src="photo1.jpg" alt="Birthday memory of Zinia" />
+              <figcaption>A day as lovely as your smile</figcaption>
+            </figure>
+            <figure class="memory-card reveal">
+              <img data-photo="2" src="photo2.jpg" alt="Birthday celebration memory of Zinia" />
+              <figcaption>A beautiful memory <span aria-hidden="true">❤️</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--wishes" aria-labelledby="wishes-title">
+        <div class="page-width">
+          <header class="section-heading reveal">
+            <p class="eyebrow">For the year ahead</p>
+            <h2 id="wishes-title">Little Wishes, Just For You</h2>
+          </header>
+          <div class="wish-cards">
+            <article class="wish-card reveal">
+              <span class="wish-card__icon" aria-hidden="true">💖</span>
+              <h3>Happiness</h3>
+              <p>May your life always be filled with happiness, laughter, and beautiful moments.</p>
+            </article>
+            <article class="wish-card reveal">
+              <span class="wish-card__icon" aria-hidden="true">🌸</span>
+              <h3>Success</h3>
+              <p>May you achieve every dream you work for and reach everything you hope for.</p>
+            </article>
+            <article class="wish-card reveal">
+              <span class="wish-card__icon" aria-hidden="true">✨</span>
+              <h3>Beautiful Memories</h3>
+              <p>May every year bring you unforgettable memories and countless reasons to smile.</p>
+            </article>
+            <article class="wish-card reveal">
+              <span class="wish-card__icon" aria-hidden="true">🎁</span>
+              <h3>Love &amp; Joy</h3>
+              <p>May your days always be surrounded by people who genuinely care about you.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="finale" id="finale" aria-labelledby="finale-title">
+        <div class="finale__halo" aria-hidden="true"></div>
+        <div class="page-width finale__content">
+          <p class="eyebrow">One more wish, from the heart</p>
+          <div class="finale__heart" aria-hidden="true">♥</div>
+          <h2 id="finale-title">🎂 HAPPY BIRTHDAY, <span data-final-name>Airav</span>! 🎂</h2>
+          <p class="finale__lead">Keep smiling.<br />Keep shining.<br />Keep being <strong>YOU.</strong> <span aria-hidden="true">❤️</span></p>
+          <p class="finale__love">With lots of love and best wishes <span aria-hidden="true">💕</span></p>
+          <button class="button button--primary" id="celebrateButton" type="button">
+            <span aria-hidden="true">🎉</span> Celebrate Again
+          </button>
+          <p class="samye-signature">Made with <span aria-hidden="true">❤️</span> by SAMYE</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
