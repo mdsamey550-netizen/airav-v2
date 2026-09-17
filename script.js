@@ -7,8 +7,8 @@
     friendName: "Zinia Ahmed",
     displayName: "Zinia (Airav)",
     finalName: "Airav",
-    photo1: "photo1.jpg",
-    photo2: "photo2.jpg",
+    photo1: "photo1.jpeg",
+    photo2: "photo2.jpeg",
     musicFile: "happy-birthday.mp3",
     birthdayMessage: `Happy Birthday to one of the most amazing people in my life! ❤️
 
